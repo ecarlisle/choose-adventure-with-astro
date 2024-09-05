@@ -1,0 +1,29 @@
+---
+/* .astro frontmatter may be a combination of data, imports, business logic. */
+import  "../styles/GlobalStyles.astro";
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{ title }</title>
+
+	<!-- Global styles are inserted into the <head> -->
+	</head>
+	<body>
+		<header>
+			<h1>{ title }</h1>
+		</header>
+
+		<main>
+			<!-- Page content is placed into <slot/>. -->
+			<slot />
+		</main>
+		<footer></footer>
+	</body>
+</html>
