@@ -1,10 +1,28 @@
 ---
 import Layout from "../layouts/main.astro";
+import { Code } from 'astro:components';
+
 const title = "Choose Your Own Adventure with Astro";
 const description = "Astro is a web framework supporting multiple JavaScript libraries and rendering lifecycles.";
 ---
 <Layout
 	title={title}
 	description={description}>
-	We have established... templated content. 🤔
+
+	<h2>Project Structure</h2>
+	<p>So far we have a simple to create multiple content pages with a common layout file.</p>
+
+	<Code lang="text" code={
+`root
+├── src
+│   └── layouts
+│       └ main.astro
+│   └── pages
+│       └ index.astro
+│   └── styles
+│       └ GlobalStyles.css
+├ astro.config.mjs
+└ tsconfig.json`} theme="github-dark-default">
+	</Code>
+
 </Layout>
