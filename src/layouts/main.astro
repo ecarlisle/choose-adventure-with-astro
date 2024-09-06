@@ -1,7 +1,9 @@
 ---
 /* .astro frontmatter may be a combination of data, imports, business logic. */
-import  "../styles/GlobalStyles.astro";
+import  "../styles/GlobalStyles.css";
+import MainNavigation from "../components/preact/MainNavigation";
 const { title, description } = Astro.props;
+const { pathname } = Astro.url;
 ---
 
 <html lang="en">
@@ -18,6 +20,7 @@ const { title, description } = Astro.props;
 	<body>
 		<header>
 			<h1>{ title }</h1>
+      <MainNavigation currentPath={pathname} />
 		</header>
 
 		<main>
