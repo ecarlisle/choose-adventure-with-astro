@@ -2,15 +2,20 @@
 import Layout from "../layouts/main.astro";
 import { Code } from 'astro:components';
 
-const title = "Choose Your Own Adventure with Astro";
+const title = "Overview";
 const description = "Astro is a web framework supporting multiple JavaScript libraries and rendering lifecycles.";
 ---
 <Layout
 	title={title}
 	description={description}>
 
-	<h2>Project Structure</h2>
-	<p>We start with a simple project structure.</p>
+	<p>We start with a simple project structure with:</p>
+	<ol>
+		<li>A layout template</li>
+		<li>One content page</li>
+		<li>Global CSS Styling</li>
+		<li>Configuration files for Astro and Typescript</li>
+	</ol>
 
 	<Code lang="text" code={
 `root
