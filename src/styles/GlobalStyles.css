@@ -40,6 +40,15 @@ h1 {
   text-align: center;
 }
 
+p {
+  margin: 0.5rem 0 1.5rem;
+}
+
+pre {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
 a {
   color: #0369A1;
   text-decoration: underline #38BDF8;
