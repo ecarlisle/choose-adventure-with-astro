@@ -1,4 +1,3 @@
-import { h } from 'preact';
 import { MAIN_NAV_LINKS } from "../../consts";
 import styles from './MainNavigation.module.css';
 
@@ -13,14 +12,14 @@ interface Props {
 }
 
 
-const MainNavigation = (props:Props) => {
+const MainNavigation = ({currentPath}:Props) => {
   return (
     <nav className={styles.nav}>
       <ul>
       {
         MAIN_NAV_LINKS.map((NavLink, index) => (
           <li key={index}>
-            <a className={NavLink.href === props.currentPath ? "active": ""} href={`${NavLink.href}`}>{ NavLink.title }</a>
+            <a className={NavLink.href === currentPath ? styles.active: ""} href={`${NavLink.href}`}>{ NavLink.title }</a>
           </li>
         ))
       }
