@@ -1,6 +1,6 @@
 ---
 /* .astro frontmatter may be a combination of data, imports, business logic. */
-import MainNavigation from "../components/preact/MainNavigation";
+import MainNavigation from "../components/navigation/MainNavigation";
 import  "../styles/GlobalStyles.css";
 
 const { title, description } = Astro.props;
@@ -10,6 +10,12 @@ const { pathname } = Astro.url;
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+
+		<!-- Font preloads -->
+		<link rel="preload" href="/inter-regular.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/inter-bold.woff2" as="font" type="font/woff2" crossorigin />
+
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={ Astro.generator } />
