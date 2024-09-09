@@ -2,6 +2,12 @@ import { defineConfig } from 'astro/config';
 
 import preact from "@astrojs/preact";
 
+import lit from "@astrojs/lit";
+
+import vue from "@astrojs/vue";
+
+import svelte from "@astrojs/svelte";
+
 // https://astro.build/config
 export default defineConfig({
   server: {
@@ -14,6 +20,6 @@ export default defineConfig({
   },
 
   integrations: [preact({
-    include: ['./src/components/preact/**/*.tsx'],
-  })],
+    include: ['./src/components/navigation/**/*.tsx'],
+  }), lit(), vue(), svelte()],
 });
