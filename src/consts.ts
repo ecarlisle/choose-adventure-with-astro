@@ -9,4 +9,9 @@ export const MAIN_NAV_LINKS = [
     title: "Navigation",
     href: "/navigation",
   },
+  {
+    id: 3,
+    title: "Counter",
+    href: "/counter",
+  },
 ];
