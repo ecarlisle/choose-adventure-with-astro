@@ -1,18 +1,11 @@
 import { MAIN_NAV_LINKS } from "../../consts";
-import styles from './MainNavigation.module.css';
-
-interface NavLink {
-  id: number;
-  title: string;
-  href: string;
-}
+import styles from './mainNavigation.module.css';
 
 interface Props {
   currentPath:string;
 }
 
-
-const MainNavigation = ({currentPath}:Props) => {
+const mainNavigation = ({currentPath}:Props) => {
   return (
     <nav className={styles.nav}>
       <ul>
@@ -28,4 +21,4 @@ const MainNavigation = ({currentPath}:Props) => {
   );
 };
 
-export default MainNavigation;
+export default mainNavigation;
