@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/main.astro";
+import { LitCounterButtons } from "../components/counter/CounterButtonsLit";
+import VueCounterComponent from "../components/counter/CounterButtons.vue";
+import SvelteCounterComponent from "../components/counter/DisplayCount.svelte";
+
+const title = "Counter";
+const description = "Astro is a web framework supporting multiple JavaScript libraries and rendering lifecycles.";
+---
+<Layout
+	title={title}
+	description={description}>
+
+  <style>
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      grid-auto-rows: 1fr;
+      margin: 1rem;
+    }
+  </style>
+
+  <section>
+    <SvelteCounterComponent client:load />
+    <LitCounterButtons client:load />
+    <VueCounterComponent client:load />
+  </section>
+
+</Layout>
