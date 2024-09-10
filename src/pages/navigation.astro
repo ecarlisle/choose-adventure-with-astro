@@ -1,9 +1,38 @@
 ---
 import Layout from "../layouts/main.astro";
-const title = "Choose Your Own Adventure with Astro";
-const description = "Astro is a web framework supporting multiple JavaScript libraries and rendering lifecycles.";
+import { Code } from 'astro:components';
+import MainNavigation from "../components/navigation/MainNavigation?raw";
+
+const title = "Main Navigation Component";
+const description = "Preact has been added as an Astro integration and used for a navigation component.";
 ---
 <Layout
 	title={title}
 	description={description}>
+
+	<p>
+		Main navigation has been added using a <a href="https://preactjs.com/">Preact</a> component. To use Preact we need to add the <a href="https://docs.astro.build/en/guides/integrations-guide/preact/"></a>@astrojs/preact</a> package and update <code>/astro.config.mjs</code>.
+	</p>
+
+	<p>The component is used without an Astro <a href="https://docs.astro.build/en/reference/directives-reference/#client-directives">client directive</a>, so it is rendered statically at build time.</p>
+
+	<p>
+		The following files have been added: 
+	</p>
+
+	<Code lang="text" code={
+`📁.
+├── 📁 components
+│   └── 📁 navigation
+│       └ MainNavigation.tsx ➕
+│       └ MainNavigation.module.css ➕
+├ astro.config.mjs 📝
+└ tsconfig.json 📝`} theme="catppuccin-latte">
+	</Code>
+
+
+	<h2>Component View with Raw Import</h2>
+	<p>Powered by Vite, the component can be <a href="https://vitejs.dev/guide/assets.html#importing-asset-as-string">imported as a string</a> for viewing in Astro's  <a href="https://docs.astro.build/en/reference/api-reference/#code-">&lt;Code&gt; component.</a></p>
+	<Code lang="javascript" code={MainNavigation} theme="catppuccin-latte" />
+
 </Layout>
