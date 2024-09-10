@@ -1,15 +1,15 @@
 import { atom } from "nanostores";
 
-// Create a store to hold the count value
+// Create the count atom.
 export const countAtom = atom<number>(0);
 
-// Increment the count
+// Increment
 export const incrementAtomCount = () => {
   countAtom.set(countAtom.get() + 1);
   return countAtom.get();
 };
 
-// Decrement the count
+// Decrement
 export const decrementAtomCount = () => {
   countAtom.set(countAtom.get() - 1);
   return countAtom.get();
