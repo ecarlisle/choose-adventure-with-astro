@@ -6,7 +6,7 @@
   font-family: 'inter';
   font-weight: 400;
   font-style: normal;
-  src: url("/inter-regular.woff2") format("woff2");
+  src: url("inter-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -36,8 +36,12 @@ header, main, footer {
 }
 
 h1 {
-  font-size: 2.6rem;
-  text-align: center;
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 0 0 0.6rem;
 }
 
 p {
@@ -50,6 +54,9 @@ ol, ul {
 
 pre {
   border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2rem;
   padding: 1.5rem;
 }
 
