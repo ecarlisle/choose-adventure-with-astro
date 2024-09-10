@@ -1,12 +1,6 @@
 import { MAIN_NAV_LINKS } from "../../consts";
 import styles from './MainNavigation.module.css';
 
-interface NavLink {
-  id: number;
-  title: string;
-  href: string;
-}
-
 interface Props {
   currentPath:string;
 }
