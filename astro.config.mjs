@@ -14,6 +14,6 @@ export default defineConfig({
   },
 
   integrations: [preact({
-    include: ['./src/components/preact/**/*.tsx'],
+    include: ['./src/components/navigation/**/*.tsx'],
   })],
 });

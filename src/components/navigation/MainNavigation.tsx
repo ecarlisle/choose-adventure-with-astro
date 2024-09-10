@@ -19,7 +19,8 @@ const MainNavigation = ({currentPath}:Props) => {
       {
         MAIN_NAV_LINKS.map((NavLink, index) => (
           <li key={index}>
-            <a className={NavLink.href === currentPath ? styles.active: ""} href={`${NavLink.href}`}>{ NavLink.title }</a>
+            <a className={NavLink.href === currentPath ? styles.active: ""} 
+               href={`${NavLink.href}`}>{ NavLink.title }</a>
           </li>
         ))
       }
