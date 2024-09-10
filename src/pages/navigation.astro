@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/main.astro";
 import { Code } from 'astro:components';
-import MainNavigation from "../components/navigation/MainNavigation?raw";
+import MainNavigationRaw from "../components/navigation/MainNavigation?raw";
 
 const title = "Main Navigation Component";
 const description = "Preact has been added as an Astro integration and used for a navigation component.";
@@ -33,6 +33,6 @@ const description = "Preact has been added as an Astro integration and used for 
 
 	<h2>Component View with Raw Import</h2>
 	<p>Powered by Vite, the component can be <a href="https://vitejs.dev/guide/assets.html#importing-asset-as-string">imported as a string</a> for viewing in Astro's  <a href="https://docs.astro.build/en/reference/api-reference/#code-">&lt;Code&gt; component.</a></p>
-	<Code lang="javascript" code={MainNavigation} theme="catppuccin-latte" />
+	<Code lang="javascript" code={MainNavigationRaw} theme="catppuccin-latte" />
 
 </Layout>

@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/main.astro";
+import { Code } from 'astro:components';
 import { LitCounterButtons } from "../components/counter/CounterButtonsLit";
 import VueCounterComponent from "../components/counter/CounterButtons.vue";
 import SvelteCounterComponent from "../components/counter/DisplayCount.svelte";
@@ -11,6 +12,7 @@ const description = "Astro is a web framework supporting multiple JavaScript lib
 	title={title}
 	description={description}>
 
+  <!-- Styles are scoped to the page. -->
   <style>
     section {
       display: grid;
@@ -21,10 +23,37 @@ const description = "Astro is a web framework supporting multiple JavaScript lib
     }
   </style>
 
+  <p>The following counter utility uses Svelte, Lit, and Vue components. They are communicating through <a href="https://github.com/nanostores/nanostores">Nanostores</a>, a tiny state manager.</p>
+
   <section>
     <SvelteCounterComponent client:load />
     <LitCounterButtons client:load />
     <VueCounterComponent client:load />
   </section>
+
+  <h2>Edits</h2>
+  <p>
+		The following files have been added, edited: 
+	</p>
+
+	<Code lang="text" code={
+`📁 src
+├── 📁 components
+│   └── 📁 counter
+│       └ CounterButtons.vue ➕
+│       └ CounterButtonsLit.ts ➕
+│       └ DisplayCount.svelte ➕
+├── 📁 lib
+│       └ CounterStore.ts ➕
+├ astro.config.mjs 📝
+├ svelte.config.js ➕
+└ tsconfig.json 📝`} theme="catppuccin-latte">
+	</Code>
+
+  <h2>Also...</h2>
+  <ul>
+    <li><a href="https://tanstack.com/">Tanstack</a> has an impressive group of framework-agnostic JavaScript software.</li>
+    <li>The Nanostores <code>atom</code> is IMO reminiscent of Brad Frost's <a href="https://atomicdesign.bradfrost.com/chapter-2/">Atomic Design</a>.</li>
+  </ul>
 
 </Layout>
