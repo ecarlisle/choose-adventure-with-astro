@@ -13,7 +13,8 @@ const { title, description } = Astro.props;
 		<meta name="description" content={ description } />
 		<title>{ title }</title>
 
-	<!-- Global styles are inserted into the <head> -->
+		<!-- Global styles are inserted into the <head> -->
+
 	</head>
 	<body>
 		<header>
@@ -21,8 +22,8 @@ const { title, description } = Astro.props;
 		</header>
 
 		<main>
-			<!-- Page content is placed into <slot/>. -->
 			<h2>{ title }</h2>
+			<!-- Page content is placed into <slot/>. -->
 			<slot />
 		</main>
 		<footer></footer>
